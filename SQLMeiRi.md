@@ -1,4 +1,12 @@
 ```sql
-SHOW DATABASE
+SHOW DATABASE;
 -- 第一学会的SQL语句^
+```
+```sql
+SHOW DATABASE;
+CREATE DATABASE db;
+SHOW DATABASE;
+DROP DATABASE db;
+SHOW DATABASE;
+-- 创建与删除数据库^
 ```
