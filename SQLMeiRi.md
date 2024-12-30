@@ -10,3 +10,10 @@ DROP DATABASE db;
 SHOW DATABASE;
 -- 创建与删除数据库^
 ```
+```sql
+SHOW DATABASES;
+CREATE DATABASE db;
+USE db;
+SELECT DATABASE();
+-- 初用函数^
+```
