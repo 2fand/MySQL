@@ -29,3 +29,10 @@ CREATE TABLE `game` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 -- 初创建表^
 ```
+```sql
+INSERT INTO game VALUES(0, 'Player', 100), (1, 'System', 9999999), (2, 'Hacker', 9999999);
+SELECT playername FROM game;
+DELETE FROM game where id = 2;
+SELECT playername FROM game;
+-- 初操作表中的数据^
+```
