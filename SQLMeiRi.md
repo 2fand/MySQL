@@ -36,3 +36,10 @@ DELETE FROM game where id = 2;
 SELECT playername FROM game;
 -- 初操作表中的数据^
 ```
+```sql
+INSERT INTO game VALUES(3, 'Hacker', 114514), (4, 'Hr', 11414), (5, 'Hoger', 100000), (6, 'Player', 4444444), (7, 'noname', 1000);
+SELECT id, playername hackers, coins FROM game WHERE coins >= 100000;
+DELETE FROM game WHERE coins >= 100000;
+SELECT id, playername players, coins FROM game;
+-- 防外挂的游戏表^
+```
