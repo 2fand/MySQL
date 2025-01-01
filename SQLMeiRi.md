@@ -43,3 +43,11 @@ DELETE FROM game WHERE coins >= 100000;
 SELECT id, playername players, coins FROM game;
 -- 防外挂的游戏表^
 ```
+```sql
+INSERT INTO game VALUES(1, 'System', 999999), (3, 'Hacker', 114514), (4, 'Hr', 11414), (5, 'Hoger', 100000), (6, 'Player', 4444444), (2, 'noname', 1000);
+SELECT id, playername hackers, coins FROM game WHERE coins >= 100000 AND id != 1;
+DELETE FROM game WHERE coins >= 100000 AND id != 1;
+SELECT id, playername players, coins FROM game WHERE id != 1;
+SELECT id, playername Systems, coins FROM game WHERE id = 1;
+-- System可以合法的开桂^
+```
