@@ -51,3 +51,8 @@ SELECT id, playername players, coins FROM game WHERE id != 1;
 SELECT id, playername Systems, coins FROM game WHERE id = 1;
 -- System可以合法的开桂^
 ```
+```sql
+INSERT INTO game VALUES(1, 'System', 999999), (3, 'System', 114514), (4, 'System', 11414), (5, 'System', 100000), (8, 'Player', 0), (2, 'noname', 1000);
+SELECT playername FROM game GROUP BY playername;
+-- 得出玩家的名字^
+```
