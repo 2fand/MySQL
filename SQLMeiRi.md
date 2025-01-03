@@ -56,3 +56,8 @@ INSERT INTO game VALUES(1, 'System', 999999), (3, 'System', 114514), (4, 'System
 SELECT playername FROM game GROUP BY playername;
 -- 得出玩家的名字^
 ```
+```sql
+INSERT INTO game VALUES(1, 'System', 999999), (3, 'System', 114514), (4, 'System', 11414), (5, 'System', 100000), (8, 'Player', 0), (2, 'noname', 1000);
+SELECT playername, COUNT(playername) SameNameCount FROM game GROUP BY playername;
+-- 求出重名玩家的数量^
+```
