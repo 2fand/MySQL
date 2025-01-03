@@ -61,3 +61,9 @@ INSERT INTO game VALUES(1, 'System', 999999), (3, 'System', 114514), (4, 'System
 SELECT playername, COUNT(playername) SameNameCount FROM game GROUP BY playername;
 -- 求出重名玩家的数量^
 ```
+```spl
+INSERT INTO game VALUES(1, 'System', 999999), (3, 'System', 114514), (4, 'System', 11414), (5, 'gamer', 100000), (8, 'Player', 0), (2, 'noname', 1000);
+DELETE FROM game WHERE 1 != id AND 'System' = playername OR coins > 99999;
+SELECT id, playername, coins FROM game;
+-- “System”重名bug已修复^
+```
