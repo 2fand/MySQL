@@ -67,3 +67,8 @@ DELETE FROM game WHERE 1 != id AND 'System' = playername OR coins > 99999;
 SELECT id, playername, coins FROM game;
 -- “System”重名bug已修复^
 ```
+```sql
+ALTER TABLE game MODIFY id INT UNSIGNED;
+ALTER TABLE game MODIFY coins INT UNSIGNED;
+-- “MODIFY”关键词的应用^
+```
