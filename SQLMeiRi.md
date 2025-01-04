@@ -78,3 +78,7 @@ CREATE TABLE test(
 ) COMMENT '测试表';
 -- COMMENT注释^
 ```
+```sql
+DROP TABLE test;
+-- 删表^
+```
