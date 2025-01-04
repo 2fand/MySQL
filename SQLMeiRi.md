@@ -72,3 +72,9 @@ ALTER TABLE game MODIFY id INT UNSIGNED;
 ALTER TABLE game MODIFY coins INT UNSIGNED;
 -- “MODIFY”关键词的应用^
 ```
+```sql
+CREATE TABLE test(
+    test TINYINT COMMENT '测试'
+) COMMENT '测试表';
+-- COMMENT注释^
+```
