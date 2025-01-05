@@ -82,3 +82,11 @@ CREATE TABLE test(
 DROP TABLE test;
 -- 删表^
 ```
+```sql
+CREATE TABLE game(
+    id INT UNSIGNED PRIMARY KEY UNIQUE AUTO_INCREMENT COMMENT '玩家编号',
+    name varchar(20) UNIQUE COMMENT '名字',
+    coins INT UNSIGNED DEFAULT 0 COMMENT '硬币数'
+) COMMENT '游戏表';
+-- 约束^
+```
