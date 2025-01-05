@@ -90,3 +90,7 @@ CREATE TABLE game(
 ) COMMENT '游戏表';
 -- 约束^
 ```
+```sql
+ALTER TABLE game ADD identity TINYINT UNSIGNED COMMENT '身份';
+-- 加字段^
+```
