@@ -94,3 +94,11 @@ CREATE TABLE game(
 ALTER TABLE game ADD identity TINYINT UNSIGNED COMMENT '身份';
 -- 加字段^
 ```
+```sql
+CREATE TABLE gameIdentity(
+    id TINYINT UNSIGNED PRIMARY KEY UNIQUE AUTO_INCREMENT COMMENT '身份编号',
+    identity VARCHAR(20) UNIQUE COMMENT '身份'
+) COMMENT '身份表';
+INSERT INTO gameIdentity(identity) VALUES('System'), ('Player');
+-- 初始化表^
+```
