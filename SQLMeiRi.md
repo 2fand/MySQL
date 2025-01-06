@@ -102,3 +102,8 @@ CREATE TABLE gameIdentity(
 INSERT INTO gameIdentity(identity) VALUES('System'), ('Player');
 -- 初始化表^
 ```
+```sql
+ALTER TABLE `db`.`game` 
+ADD CONSTRAINT `identity` FOREIGN KEY (`identity`) REFERENCES `db`.`gameidentity` (`id`) ON DELETE SET NULL ON UPDATE SET NULL;
+-- 添加外键^
+```
