@@ -112,3 +112,7 @@ INSERT INTO game(name, coins, identity) VALUES('System', 9999999, 1);
 INSERT INTO game(name, coins, identity) VALUES('System', 9999999, 0);
 -- UNIQUE约束发力了^
 ```
+```sql
+SELECT id 编号, name 名字, coins 金币数量, IF(0 = identity, '玩家', '系统') 身份 FROM game;
+-- IF函数的应用^
+```
