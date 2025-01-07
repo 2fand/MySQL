@@ -107,3 +107,8 @@ ALTER TABLE `db`.`game`
 ADD CONSTRAINT `identity` FOREIGN KEY (`identity`) REFERENCES `db`.`gameidentity` (`id`) ON DELETE SET NULL ON UPDATE SET NULL;
 -- 添加外键^
 ```
+```sql
+INSERT INTO game(name, coins, identity) VALUES('System', 9999999, 1);
+INSERT INTO game(name, coins, identity) VALUES('System', 9999999, 0);
+-- UNIQUE约束发力了^
+```
