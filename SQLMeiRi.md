@@ -120,3 +120,7 @@ SELECT id 编号, name 名字, coins 金币数量, IF(0 = identity, '玩家', '�
 SELECT id 编号, name 名字, coins 金币数量, (SELECT iden.identity FROM gameidentity iden WHERE iden.id = game.identity) 身份 FROM game;
 -- 标量子查询的应用^
 ```
+```sql
+# 我会用#号来注释
+-- 见上面注释^
+```
