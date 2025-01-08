@@ -116,3 +116,7 @@ INSERT INTO game(name, coins, identity) VALUES('System', 9999999, 0);
 SELECT id 编号, name 名字, coins 金币数量, IF(0 = identity, '玩家', '系统') 身份 FROM game;
 -- IF函数的应用^
 ```
+```sql
+SELECT id 编号, name 名字, coins 金币数量, (SELECT iden.identity FROM gameidentity iden WHERE iden.id = game.identity) 身份 FROM game;
+-- 标量子查询的应用^
+```
