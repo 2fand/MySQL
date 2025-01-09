@@ -124,3 +124,7 @@ SELECT id 编号, name 名字, coins 金币数量, (SELECT iden.identity FROM ga
 # 我会用#号来注释
 -- 见上面注释^
 ```
+```sql
+DELETE FROM game g WHERE 'System' != (SELECT gid.identity FROM gameidentity gid WHERE g.identity = gid.id) AND g.coins > 10000000;
+-- 新的防外挂删除代码^
+```
