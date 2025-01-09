@@ -128,3 +128,7 @@ SELECT id 编号, name 名字, coins 金币数量, (SELECT iden.identity FROM ga
 DELETE FROM game g WHERE 'System' != (SELECT gid.identity FROM gameidentity gid WHERE g.identity = gid.id) AND g.coins > 10000000;
 -- 新的防外挂删除代码^
 ```
+```sql
+SELECT id, name, coins, identity FROM game WHERE name LIKE '___%';
+-- “LIKE”的应用^
+```
