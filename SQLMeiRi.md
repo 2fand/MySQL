@@ -132,3 +132,8 @@ DELETE FROM game g WHERE 'System' != (SELECT gid.identity FROM gameidentity gid 
 SELECT id, name, coins, identity FROM game WHERE name LIKE '___%';
 -- “LIKE”的应用^
 ```
+```sql
+SET @a = 1;
+SELECT @a;
+-- 局部变量的使用^
+```
