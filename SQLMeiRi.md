@@ -137,3 +137,7 @@ SET @a = 1;
 SELECT @a;
 -- 局部变量的使用^
 ```
+```sql
+SELECT @@autocommit;
+-- 系统变量的查询^
+```
