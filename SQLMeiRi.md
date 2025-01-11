@@ -145,3 +145,7 @@ SELECT @@autocommit;
 SELECT 1, '&', 'db', 1 != 0, 1+6, 'aaa' LIKE '%';
 -- MYSQL中99%的人都不知道的冷知识 —— SELECT关键字可以查询常量以及算式，布尔值等的结果^
 ```
+```sql
+SELECT id, name, coins, (SELECT gid.identity FROM gameidentity gid WHERE g.identity = gid.id) identity FROM game g WHERE id IN(1, 3, 5);
+-- “IN”的应用^
+```
