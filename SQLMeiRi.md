@@ -149,3 +149,9 @@ SELECT 1, '&', 'db', 1 != 0, 1+6, 'aaa' LIKE '%';
 SELECT id, name, coins, (SELECT gid.identity FROM gameidentity gid WHERE g.identity = gid.id) identity FROM game g WHERE id IN(1, 3, 5);
 -- “IN”的应用^
 ```
+```sql
+CREATE TABLE test(
+    t TINYINT
+) ENGINE = MyISAM;
+-- 表自定义设置存储引擎^
+```
