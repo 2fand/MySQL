@@ -155,3 +155,7 @@ CREATE TABLE test(
 ) ENGINE = MyISAM;
 -- 表自定义设置存储引擎^
 ```
+```sql
+SHOW ENGINES;
+-- 展示所有内置存储引擎^
+```
