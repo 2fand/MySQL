@@ -164,3 +164,7 @@ SET GLOBAL TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
 SELECT @@TRANSACTION_ISOLATION;
 -- 设事务的隔离级别为read uncommitted^
 ```
+```sql
+SELECT id, name, coins, identity FROM game WHERE name REGEXP '.{3}';
+-- 用正则表达式来查询数据^
+```
