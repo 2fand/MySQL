@@ -159,3 +159,8 @@ CREATE TABLE test(
 SHOW ENGINES;
 -- 展示所有内置存储引擎^
 ```
+```sql
+SET GLOBAL TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SELECT @@TRANSACTION_ISOLATION;
+-- 设事务的隔离级别为read uncommitted^
+```
