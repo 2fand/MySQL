@@ -168,3 +168,7 @@ SELECT @@TRANSACTION_ISOLATION;
 SELECT id, name, coins, identity FROM game WHERE name REGEXP '.{3}';
 -- 用正则表达式来查询数据^
 ```
+```sql
+SELECT g.id, g.name, g.coins, gid.identity FROM game g, gameidentity gid WHERE g.identity = gid.id;
+-- 用隐式内链接来查询数据^
+```
