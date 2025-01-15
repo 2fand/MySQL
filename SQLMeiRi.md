@@ -180,3 +180,7 @@ SELECT g.id, g.name, g.coins, gid.identity FROM game g INNER JOIN gameidentity g
 SELECT g.id, g.name, g.coins, gid.identity FROM game g LEFT JOIN gameidentity gid ON g.identity = gid.id;
 -- 用左外链接来查询数据^
 ```
+```sql
+SELECT g.id, g.name, g.coins, gid.identity FROM game g RIGHT JOIN gameidentity gid ON g.identity = gid.id;
+-- 用右外链接来查询数据^
+```
