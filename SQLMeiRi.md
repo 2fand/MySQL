@@ -190,3 +190,9 @@ UNION
 SELECT t FROM testa;
 -- 两表合为一^
 ```
+```sql
+SELECT t FROM test
+UNION ALL
+SELECT t FROM testa;
+-- 把两表的全部数据合为一表^
+```
