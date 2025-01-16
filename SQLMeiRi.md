@@ -184,3 +184,9 @@ SELECT g.id, g.name, g.coins, gid.identity FROM game g LEFT JOIN gameidentity gi
 SELECT g.id, g.name, g.coins, gid.identity FROM game g RIGHT JOIN gameidentity gid ON g.identity = gid.id;
 -- 用右外链接来查询数据^
 ```
+```sql
+SELECT t FROM test
+UNION
+SELECT t FROM testa;
+-- 两表合为一^
+```
