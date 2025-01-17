@@ -196,3 +196,7 @@ UNION ALL
 SELECT t FROM testa;
 -- 把两表的全部数据合为一表^
 ```
+```sql
+SELECT AVG(t) FROM test;
+-- 求平均值^
+```
