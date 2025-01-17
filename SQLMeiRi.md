@@ -200,3 +200,7 @@ SELECT t FROM testa;
 SELECT AVG(t) FROM test;
 -- 求平均值^
 ```
+```sql
+SELECT MIN(t) FROM test;
+-- 求最小值^
+```
