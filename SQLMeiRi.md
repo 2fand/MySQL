@@ -204,3 +204,7 @@ SELECT AVG(t) FROM test;
 SELECT MIN(t) FROM test;
 -- 求最小值^
 ```
+```sql
+SELECT MAX(t) FROM test;
+-- 求最大值^
+```
