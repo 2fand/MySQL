@@ -208,3 +208,7 @@ SELECT MIN(t) FROM test;
 SELECT MAX(t) FROM test;
 -- 求最大值^
 ```
+```sql
+SELECT t+1 FROM test;
+-- 使表t中所有的数据在被查询时全都加1^
+```
