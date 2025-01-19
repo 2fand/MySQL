@@ -212,3 +212,7 @@ SELECT MAX(t) FROM test;
 SELECT t+1 FROM test;
 -- 使表t中所有的数据在被查询时全都加1^
 ```
+```sql
+SELECT CEIL(0.1);
+-- 向上取整^
+```
