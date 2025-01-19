@@ -216,3 +216,7 @@ SELECT t+1 FROM test;
 SELECT CEIL(0.1);
 -- 向上取整^
 ```
+```sql
+SELECT FLOOR(0.1);
+-- 向下取整^
+```
