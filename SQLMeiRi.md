@@ -217,6 +217,10 @@ SELECT CEIL(0.1);
 -- 向上取整^
 ```
 ```sql
+SELECT ROUND(0.1), ROUND(0.5);
+-- 四舍五入^
+```
 SELECT FLOOR(0.1);
 -- 向下取整^
 ```
+`
