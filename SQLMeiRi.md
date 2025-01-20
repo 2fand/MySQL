@@ -223,4 +223,11 @@ SELECT ROUND(0.1), ROUND(0.5);
 SELECT FLOOR(0.1);
 -- 向下取整^
 ```
-`
+```sql
+SELECT ROUND(0.1), ROUND(0.5);
+-- 四舍五入^
+```
+```sql
+SELECT ROUND(1.254, 1), ROUND(1.254, 2);
+-- 保留1位或2位小数^
+```
