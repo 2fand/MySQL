@@ -231,3 +231,7 @@ SELECT ROUND(0.1), ROUND(0.5);
 SELECT ROUND(1.254, 1), ROUND(1.254, 2);
 -- 保留1位或2位小数^
 ```
+``sql
+SELECT SUM(t) FROM test;
+-- 单表数据求和^
+```
