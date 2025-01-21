@@ -235,3 +235,7 @@ SELECT ROUND(1.254, 1), ROUND(1.254, 2);
 SELECT SUM(t) FROM test;
 -- 单表数据求和^
 ```
+```sql
+SELECT (SELECT SUM(t) FROM test) + (SELECT SUM(t) FROM testa) SUM;
+-- 双表数据求和^
+```
