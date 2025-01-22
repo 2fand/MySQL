@@ -243,3 +243,7 @@ SELECT (SELECT SUM(t) FROM test) + (SELECT SUM(t) FROM testa) SUM;
 SELECT IFNULL(t, 'NULL') t FROM test;
 -- IFNULL条件判断函数的应用^
 ```
+```sql
+SELECT CASE WHEN 2 = 1 THEN '1' WHEN 1 = 1 THEN '2' ELSE 'else' END;
+-- “CASE WHEN THEN ELSE END”判断语句的应用^
+```
