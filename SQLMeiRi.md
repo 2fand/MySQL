@@ -239,3 +239,7 @@ SELECT SUM(t) FROM test;
 SELECT (SELECT SUM(t) FROM test) + (SELECT SUM(t) FROM testa) SUM;
 -- 双表数据求和^
 ```
+```sql
+SELECT IFNULL(t, 'NULL') t FROM test;
+-- IFNULL条件判断函数的应用^
+```
