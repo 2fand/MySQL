@@ -247,3 +247,7 @@ SELECT IFNULL(t, 'NULL') t FROM test;
 SELECT CASE WHEN 2 = 1 THEN '1' WHEN 1 = 1 THEN '2' ELSE 'else' END;
 -- “CASE WHEN THEN ELSE END”判断语句的应用^
 ```
+```sql
+SELECT CASE 1 WHEN 1 THEN '1' WHEN 2 THEN '2' ELSE 'else' END;
+-- C/C++的switch语句^
+```
