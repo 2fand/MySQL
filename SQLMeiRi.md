@@ -251,3 +251,7 @@ SELECT CASE WHEN 2 = 1 THEN '1' WHEN 1 = 1 THEN '2' ELSE 'else' END;
 SELECT CASE 1 WHEN 1 THEN '1' WHEN 2 THEN '2' ELSE 'else' END;
 -- C/C++的switch语句^
 ```
+```sql
+SELECT LPAD('s',111, 'asdfgf')
+-- 字符串函数^
+```
