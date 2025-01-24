@@ -255,3 +255,7 @@ SELECT CASE 1 WHEN 1 THEN '1' WHEN 2 THEN '2' ELSE 'else' END;
 SELECT LPAD('s',111, 'asdfgf')
 -- 字符串函数^
 ```
+```sql
+SELECT SUBSTR('1234!@#$', 3, 4);
+-- 提取子字符串^
+```
