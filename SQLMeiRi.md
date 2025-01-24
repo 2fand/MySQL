@@ -259,3 +259,7 @@ SELECT LPAD('s',111, 'asdfgf')
 SELECT SUBSTR('1234!@#$', 3, 4);
 -- 提取子字符串^
 ```
+```sql
+SELECT POW(5, 5)
+-- n的n次方^
+```
