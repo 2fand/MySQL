@@ -263,3 +263,7 @@ SELECT SUBSTR('1234!@#$', 3, 4);
 SELECT POW(5, 5)
 -- n的n次方^
 ```
+```sql
+SELECT ABS(-666);
+-- ABS绝对值^
+```
