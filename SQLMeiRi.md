@@ -267,3 +267,7 @@ SELECT POW(5, 5)
 SELECT ABS(-666);
 -- ABS绝对值^
 ```
+```sql
+SELECT id, name, coins, identity FROM game WHERE 1 != id ORDER BY coins DESC LIMIT 2, 1;
+-- 查询金币数量第三高玩家信息^
+```
