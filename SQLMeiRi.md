@@ -271,3 +271,7 @@ SELECT ABS(-666);
 SELECT id, name, coins, identity FROM game WHERE 1 != id ORDER BY coins DESC LIMIT 2, 1;
 -- 查询金币数量第三高玩家信息^
 ```
+```sql
+SELECT id, name, coins, identity FROM game WHERE 1 != id ORDER BY coins DESC LIMIT 3;
+-- 查询金币数量前三高玩家信息^
+```
