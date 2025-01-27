@@ -279,3 +279,7 @@ SELECT id, name, coins, identity FROM game WHERE 1 != id ORDER BY coins DESC LIM
 SELECT id, name, coins, identity FROM game WHERE 1 <> id
 -- 也是不等号^
 ```
+```sql
+CREATE USER 'aaa^^^111'@'127.0.0.1' IDENTIFIED BY 'aaa^^^111';
+-- 创建用户^
+```
