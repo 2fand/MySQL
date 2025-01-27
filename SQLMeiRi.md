@@ -283,3 +283,7 @@ SELECT id, name, coins, identity FROM game WHERE 1 <> id
 CREATE USER 'aaa^^^111'@'127.0.0.1' IDENTIFIED BY 'aaa^^^111';
 -- 创建用户^
 ```
+```sql
+ALTER USER 'aaa^^^111'@'127.0.0.1' IDENTIFIED BY 'aaa^^^111@';
+-- 修改用户密码^
+```
