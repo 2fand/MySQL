@@ -291,3 +291,7 @@ ALTER USER 'aaa^^^111'@'127.0.0.1' IDENTIFIED BY 'aaa^^^111@';
 SELECT SUBSTR('12345678910', 5);
 -- 另一种提取子字符串的方式^
 ```
+```sql
+SELECT DAY('2000-01-01');
+-- 查询日期的天数
+```
