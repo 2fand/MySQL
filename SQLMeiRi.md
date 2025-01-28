@@ -287,3 +287,7 @@ CREATE USER 'aaa^^^111'@'127.0.0.1' IDENTIFIED BY 'aaa^^^111';
 ALTER USER 'aaa^^^111'@'127.0.0.1' IDENTIFIED BY 'aaa^^^111@';
 -- 修改用户密码^
 ```
+```sql
+SELECT SUBSTR('12345678910', 5);
+-- 另一种提取子字符串的方式^
+```
