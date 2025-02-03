@@ -339,3 +339,7 @@ CREATE INDEX coinIndex ON game(coins);
 DROP INDEX coinIndex ON game;
 -- 删除表的索引^
 ```
+```sql
+CREATE FULLTEXT INDEX nameIndex ON game(name);
+-- 创建表的全文索引^
+```
