@@ -335,3 +335,7 @@ SHOW INDEX FROM game;
 CREATE INDEX coinIndex ON game(coins);
 -- 创建表的索引^
 ```
+```sql
+DROP INDEX coinIndex ON game;
+-- 删除表的索引^
+```
