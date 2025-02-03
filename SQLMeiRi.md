@@ -331,3 +331,7 @@ SELECT DATEDIFF('2101-01-21', '0121-12-01');
 SHOW INDEX FROM game;
 -- 显示表的索引^
 ```
+```sql
+CREATE INDEX coinIndex ON game(coins);
+-- 创建表的索引^
+```
