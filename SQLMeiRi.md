@@ -327,3 +327,7 @@ SELECT DATEDIFF('2101-01-21', '2121-12-01');
 SELECT DATEDIFF('2101-01-21', '0121-12-01');
 -- DATADIFF方法2^
 ```
+```sql
+SHOW INDEX FROM game;
+-- 显示表的索引^
+```
