@@ -343,3 +343,8 @@ DROP INDEX coinIndex ON game;
 CREATE FULLTEXT INDEX nameIndex ON game(name);
 -- 创建表的全文索引^
 ```
+```sql
+SELECT SUBSTRING_INDEX('11111,22222,33333', ',', 1);
+-- SUBSTRING_INDEX函数的初次调用^
+```
+```
