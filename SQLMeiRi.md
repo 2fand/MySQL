@@ -359,3 +359,11 @@ SELECT SUBSTRING_INDEX('11111,22222,33333', ',', -1);
 SELECT SUBSTRING_INDEX('11111,22222,33333', ',', -2);
 -- SUBSTRING_INDEX函数的第四次调用^
 ```
+```sql
+SELECT 
+    id, name, coins, identity,
+    ROW_NUMBER() OVER()
+FROM 
+    game;
+-- 无子句窗口函数^
+```
