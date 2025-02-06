@@ -367,3 +367,11 @@ FROM
     game;
 -- 无子句窗口函数^
 ```
+```sql
+SELECT 
+    id, name, coins, identity,
+    ROW_NUMBER() OVER(PARTITION BY identity ORDER BY coins DESC)
+FROM 
+    game;
+-- 窗口函数的实际使用^
+```
