@@ -381,5 +381,13 @@ SELECT
     ROW_NUMBER() OVER (ORDER BY gpa DESC) 排行
 FROM 
     user_profile;
--- 生成学生的排行榜^
+-- 生成每个学生的排行榜^
+```
+```sql
+SELECT 
+    id, device_id, gender, age, university, gpa,
+    RANK() OVER (ORDER BY gpa DESC) 排行
+FROM 
+    user_profile;
+-- 生成每个学生的排行榜2^
 ```
