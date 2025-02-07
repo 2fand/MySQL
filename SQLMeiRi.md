@@ -375,3 +375,11 @@ FROM
     game;
 -- 窗口函数的实际使用^
 ```
+```sql
+SELECT 
+    id, device_id, gender, age, university, gpa,
+    ROW_NUMBER() OVER (ORDER BY gpa DESC) 排行
+FROM 
+    user_profile;
+-- 生成学生的排行榜^
+```
