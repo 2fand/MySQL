@@ -391,3 +391,12 @@ FROM
     user_profile;
 -- 生成每个学生的排行榜2^
 ```
+```sql
+SELECT 
+    name, point, likes,
+    LAG(name) OVER (ORDER BY point DESC) next_name,
+    LAG(point) OVER (ORDER BY point DESC) next_point
+FROM
+    xiaoyuan_calculation_tb;
+-- LAG跨行函数可能的应用^
+```
