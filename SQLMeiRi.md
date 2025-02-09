@@ -431,3 +431,29 @@ FROM
     xiaomings_salary_tb;
 -- 有bug却还能跑的程序^
 ```
+```sql
+SELECT 
+    salary_date 
+INTO 
+    @sec_grp_mark
+FROM 
+(
+    SELECT
+        (COUNT(*) OVER (ORDER BY salary_date RANGE BETWEEN INTERVAL 1 MONTH PRECEDING AND CURRENT ROW)) groupId, salary_date, salary
+    FROM
+        xiaomings_salary_tb
+    ORDER BY
+        salary_date DESC
+) tb
+WHERE
+    groupId = 1
+LIMIT
+    1;
+  
+SELECT  
+    ROW_NUMBER() OVER (PARTITION BY IF(salary_date < @sec_grp_mark, 1, 2)) comboDays,
+    salary_date, salary
+FROM
+    xiaomings_salary_tb;  
+-- 变得正常的sql^
+```
