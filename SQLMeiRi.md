@@ -400,3 +400,34 @@ FROM
     xiaoyuan_calculation_tb;
 -- LAG跨行函数可能的应用^
 ```
+```sql
+SELECT
+    salary_date 
+INTO
+    @sec_grp
+FROM
+    (
+    SELECT 
+        COUNT(*) OVER () rid, 
+        salary_date 
+    FROM 
+    (
+        SELECT
+            (COUNT(*) OVER (ORDER BY salary_date RANGE BETWEEN INTERVAL 1 MONTH PRECEDING AND CURRENT ROW)) groupId, salary_date, salary
+        FROM
+            xiaomings_salary_tb
+    ) tb
+    WHERE
+        groupId = 1
+    ) tba
+WHERE 
+    rid = 1;
+    
+
+SELECT  
+    ROW_NUMBER() OVER (PARTITION BY IF(salary_date < @sec_grp, 1, 2)) comboDays,
+    salary_date, salary
+FROM
+    xiaomings_salary_tb;
+-- 有bug却还能跑的程序^
+```
