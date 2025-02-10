@@ -457,3 +457,13 @@ FROM
     xiaomings_salary_tb;  
 -- 变得正常的sql^
 ```
+```sql
+-- 函数TST
+CREATE DEFINER=`root`@`localhost` FUNCTION `TST`() RETURNS int
+    NO SQL
+BEGIN
+  #Routine body goes here...
+RETURN 101;
+END
+-- NO SQL函数^
+```
