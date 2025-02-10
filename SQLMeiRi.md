@@ -467,3 +467,14 @@ RETURN 101;
 END
 -- NO SQL函数^
 ```
+```sql
+-- 函数TST
+CREATE DEFINER=`root`@`localhost` FUNCTION `TST`( i int) RETURNS int
+    READS SQL DATA
+BEGIN
+  DECLARE b TINYINT DEFAULT 0;
+  SELECT IF(i= 0, 1, 0) INTO @b;
+RETURN @b;
+END
+-- READS SQL DATA函数^
+```
