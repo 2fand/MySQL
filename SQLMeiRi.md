@@ -489,3 +489,13 @@ RETURN @b;
 END
 -- DETERMINISTIC函数^
 ```
+```sql
+-- 函数TST
+CREATE DEFINER=`root`@`localhost` FUNCTION `TST`( i int) RETURNS int
+    READS SQL DATA
+BEGIN
+  select T into @b FROM test LIMIT 1;
+RETURN @b;
+END
+-- 查找表中数据的函数^
+```
