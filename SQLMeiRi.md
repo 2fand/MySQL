@@ -478,3 +478,14 @@ RETURN @b;
 END
 -- READS SQL DATA函数^
 ```
+```sql
+-- 函数TST
+CREATE DEFINER=`root`@`localhost` FUNCTION `TST`( i int) RETURNS int
+    DETERMINISTIC
+BEGIN
+  DECLARE b TINYINT DEFAULT 0;
+  SELECT IF(i<0, 1, 0) INTO @b;
+RETURN @b;
+END
+-- DETERMINISTIC函数^
+```
