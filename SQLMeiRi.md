@@ -534,3 +534,15 @@ FROM
     participants
 -- 用了分组子句，排序子句和限行子句的窗口函数^
 ```
+```sql
+-- test存储过程
+CREATE DEFINER=`root`@`localhost` PROCEDURE `test`(INOUT i int)
+BEGIN
+  SET i := i * 2;
+END
+-- 查询操作
+SET @i := -115;
+CALL test(@i);
+SELECT @i;
+-- 存储过程的创建和使用^
+```
