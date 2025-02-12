@@ -499,3 +499,38 @@ RETURN @b;
 END
 -- 查找表中数据的函数^
 ```
+```
+DROP TABLE IF EXISTS participants;
+
+CREATE TABLE participants(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(20),
+    gender CHAR(1),
+    time DATETIME,
+    m FLOAT
+);
+
+INSERT INTO participants(name, gender, time, m) VALUES
+('凤皇', '男', '2020-06-17 10:04:24', 1.49),
+('柏佳兴', '男', '2020-06-17 10:03:35', 1.07),
+('田静', '女', '2020-06-17 10:01:29', 1.34),
+('何平', '男', '2020-06-17 10:01:05', 1.14),
+('李尤爱', '女', '2020-06-17 10:05:07', 1.56),
+('束组', '男', '2020-06-17 10:02:02', 1.66),
+('曹彼壁', '男', '2020-06-17 10:03:09', 1.62),
+('朱翠碧', '女', '2020-06-17 10:04:03', 1.15),
+('赵涵然', '女', '2020-06-17 10:00:22', 1.61),
+('傅幸', '男', '2020-06-17 10:02:34', 1.41);
+
+SELECT 
+    *
+FROM
+    participants;
+
+SELECT 
+    id, name, gender, time, m, 
+    MAX(m) OVER (PARTITION BY gender ORDER BY time ROWS BETWEEN UNBOUNDED PRECEDING AND CURRENT ROW) maxForEachGender
+FROM
+    participants
+-- 用了分组子句，排序子句和限行子句的窗口函数^
+```
