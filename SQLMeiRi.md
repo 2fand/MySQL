@@ -546,3 +546,7 @@ CALL test(@i);
 SELECT @i;
 -- 存储过程的创建和使用^
 ```
+```sql
+CREATE VIEW v AS SELECT t FROM test;
+-- 创建视图^
+```
