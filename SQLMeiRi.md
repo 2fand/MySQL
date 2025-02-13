@@ -550,3 +550,7 @@ SELECT @i;
 CREATE VIEW v AS SELECT t FROM test;
 -- 创建视图^
 ```
+```sql
+SELECT t FROM v WHERE t > 3;
+-- 使用视图^
+```
