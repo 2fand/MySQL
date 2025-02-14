@@ -558,3 +558,7 @@ SELECT t FROM v WHERE t > 3;
 CREATE VIEW va AS SELECT t FROM test WHERE t < 10;
 -- 创建有条件的视图^
 ```
+```sql
+DROP VIEW va;
+-- 删除视图^
+```
