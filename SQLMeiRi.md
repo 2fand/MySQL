@@ -554,3 +554,7 @@ CREATE VIEW v AS SELECT t FROM test;
 SELECT t FROM v WHERE t > 3;
 -- 使用视图^
 ```
+```sql
+CREATE VIEW va AS SELECT t FROM test WHERE t < 10;
+-- 创建有条件的视图^
+```
