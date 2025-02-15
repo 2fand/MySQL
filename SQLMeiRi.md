@@ -562,3 +562,7 @@ CREATE VIEW va AS SELECT t FROM test WHERE t < 10;
 DROP VIEW va;
 -- 删除视图^
 ```
+```sql
+CREATE VIEW vaa AS SELECT t FROM test WHERE t < 10 WITH CASCADED CHECK OPTION;
+-- 创建CASCADED视图^
+```
