@@ -576,3 +576,9 @@ SELECT t FROM test;
 CREATE VIEW vbb AS SELECT t FROM test WHERE t < 10 WITH LOCAL CHECK OPTION;
 -- 创建LOCAL视图^
 ```
+```sql
+INSERT INTO vbb VALUES(1);
+-- INSERT INTO vaa VALUES(1000); **ERROR**
+SELECT t FROM test;
+-- LOCAL视图的插入测试^
+```
