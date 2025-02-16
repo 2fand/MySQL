@@ -572,3 +572,7 @@ INSERT INTO vaa VALUES(1);
 SELECT t FROM test;
 -- CASCADED视图的插入测试^
 ```
+```sql
+CREATE VIEW vbb AS SELECT t FROM test WHERE t < 10 WITH LOCAL CHECK OPTION;
+-- 创建LOCAL视图^
+```
