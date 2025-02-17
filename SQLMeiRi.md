@@ -582,3 +582,8 @@ INSERT INTO vbb VALUES(1);
 SELECT t FROM test;
 -- LOCAL视图的插入测试^
 ```
+```sql
+CREATE VIEW vb AS SELECT t FROM vbb ORDER BY t DESC WITH LOCAL CHECK OPTION;
+SELECT t FROM vb;
+-- 创建LOCAL嵌套视图^
+```
