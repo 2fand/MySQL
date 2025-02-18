@@ -591,3 +591,7 @@ SELECT t FROM vb;
 CREATE VIEW vc AS SELECT t FROM vb WITH CASCADED CHECK OPTION;
 -- 创建CASCADED嵌套视图^
 ```
+```sql
+DROP VIEW v, vaa, vb, vbb, vc;
+-- 批量删除视图^
+```
