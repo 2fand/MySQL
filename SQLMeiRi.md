@@ -595,3 +595,7 @@ CREATE VIEW vc AS SELECT t FROM vb WITH CASCADED CHECK OPTION;
 DROP VIEW v, vaa, vb, vbb, vc;
 -- 批量删除视图^
 ```
+```sql
+DROP TABLE a, b;
+-- 批量删表^
+```
