@@ -603,3 +603,8 @@ DROP TABLE a, b;
 EXPLAIN SELECT 1;
 -- 初用EXPLAIN关键字查询SELECT查询语句的执行情况^
 ```
+```sql
+CREATE INDEX t_index ON test(t);
+EXPLAIN SELECT t FROM test;
+-- 索引的用途^
+```
