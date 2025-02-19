@@ -599,3 +599,7 @@ DROP VIEW v, vaa, vb, vbb, vc;
 DROP TABLE a, b;
 -- 批量删表^
 ```
+```sql
+EXPLAIN SELECT 1;
+-- 初用EXPLAIN关键字查询SELECT查询语句的执行情况^
+```
