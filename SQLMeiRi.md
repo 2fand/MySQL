@@ -612,3 +612,7 @@ EXPLAIN SELECT t FROM test;
 EXPLAIN SELECT t FROM test USE INDEX(t_index);
 -- SQL提示1——USE INDEX^
 ```
+```sql
+EXPLAIN SELECT t FROM test IGNORE INDEX(t_index);
+-- SQL提示2——IGNORE INDEX^
+```
