@@ -608,3 +608,7 @@ CREATE INDEX t_index ON test(t);
 EXPLAIN SELECT t FROM test;
 -- 索引的用途^
 ```
+```sql
+EXPLAIN SELECT t FROM test USE INDEX(t_index);
+-- SQL提示1——USE INDEX^
+```
