@@ -616,3 +616,7 @@ EXPLAIN SELECT t FROM test USE INDEX(t_index);
 EXPLAIN SELECT t FROM test IGNORE INDEX(t_index);
 -- SQL提示2——IGNORE INDEX^
 ```
+```sql
+CREATE INDEX game_IdAndnameAndCoins_Index ON game(id, name, coins);
+-- 联合索引的创建^
+```
