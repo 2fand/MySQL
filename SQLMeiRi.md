@@ -624,3 +624,7 @@ CREATE INDEX game_IdAndnameAndCoins_Index ON game(id, name, coins);
 EXPLAIN SELECT id, name, coins, identity FROM game FORCE INDEX(PRIMARY) WHERE id < 5 AND coins < 500;
 -- SQL提示3——FORCE INDEX^
 ```
+```sql
+EXPLAIN SELECT id FROM game IGNORE INDEX(PRIMARY) WHERE id = 1;
+-- 非常快的const查询^
+```
