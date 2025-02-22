@@ -628,3 +628,8 @@ EXPLAIN SELECT id, name, coins, identity FROM game FORCE INDEX(PRIMARY) WHERE id
 EXPLAIN SELECT id FROM game IGNORE INDEX(PRIMARY) WHERE id = 1;
 -- 非常快的const查询^
 ```
+```sql
+SELECT g.id, g.name, g.coins, gi.identity FROM game g JOIN gameidentity gi ON g.identity = gi.id;
+EXPLAIN SELECT g.id, g.name, g.coins, gi.identity FROM game g JOIN gameidentity gi ON g.identity = gi.id;
+-- 查询联合查询执行的情况，慢^
+```
