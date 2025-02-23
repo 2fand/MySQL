@@ -631,9 +631,14 @@ EXPLAIN SELECT id FROM game IGNORE INDEX(PRIMARY) WHERE id = 1;
 ```sql
 SELECT g.id, g.name, g.coins, gi.identity FROM game g JOIN gameidentity gi ON g.identity = gi.id;
 EXPLAIN SELECT g.id, g.name, g.coins, gi.identity FROM game g JOIN gameidentity gi ON g.identity = gi.id;
--- 查询联合查询执行的情况，慢^
+-- 查询联合查询执行的情况，平均很慢^
 ```
 ```sql
 EXPLAIN SELECT id, name, coins, identity FROM game FORCE INDEX(PRIMARY) LIMIT 1, 6;
 -- LIMIT分页查询的查询情况，全表扫描，很慢^
+```
+```sql
+SELECT COUNT(*), identity FROM game GROUP BY identity;
+EXPLAIN SELECT COUNT(*), identity FROM game GROUP BY identity;
+-- GROUP BY分组查询，用了索引来查询，快了一点^
 ```
