@@ -633,3 +633,7 @@ SELECT g.id, g.name, g.coins, gi.identity FROM game g JOIN gameidentity gi ON g.
 EXPLAIN SELECT g.id, g.name, g.coins, gi.identity FROM game g JOIN gameidentity gi ON g.identity = gi.id;
 -- 查询联合查询执行的情况，慢^
 ```
+```sql
+EXPLAIN SELECT id, name, coins, identity FROM game FORCE INDEX(PRIMARY) LIMIT 1, 6;
+-- LIMIT分页查询的查询情况，全表扫描，很慢^
+```
