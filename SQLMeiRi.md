@@ -646,3 +646,8 @@ EXPLAIN SELECT COUNT(*), identity FROM game GROUP BY identity;
 EXPLAIN SELECT id, name, coins, identity FROM game ORDER BY coins;
 -- 可以优化ORDER BY排序子句了^
 ```
+```sql
+CREATE INDEX all_indexa ON game(coins, id, name, identity);
+EXPLAIN SELECT id, name, coins, identity FROM game FORCE index (all_indexa) ORDER BY coins ASC;
+-- 这下ORDER BY排序子句变快了^
+```
