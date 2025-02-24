@@ -642,3 +642,7 @@ SELECT COUNT(*), identity FROM game GROUP BY identity;
 EXPLAIN SELECT COUNT(*), identity FROM game GROUP BY identity;
 -- GROUP BY分组查询，用了索引来查询，快了一点^
 ```
+```sql
+EXPLAIN SELECT id, name, coins, identity FROM game ORDER BY coins;
+-- 可以优化ORDER BY排序子句了^
+```
