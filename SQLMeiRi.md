@@ -651,3 +651,7 @@ CREATE INDEX all_indexa ON game(coins, id, name, identity);
 EXPLAIN SELECT id, name, coins, identity FROM game FORCE index (all_indexa) ORDER BY coins ASC;
 -- 这下ORDER BY排序子句变快了^
 ```
+```sql
+EXPLAIN SELECT id, name, coins, identity FROM game ORDER BY coins DESC;
+-- 索引往后遍历的查询语句^
+```
