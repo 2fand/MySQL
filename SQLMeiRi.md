@@ -665,3 +665,8 @@ DROP INDEX coins_index ON game;
 EXPLAIN SELECT id, name, coins, identity FROM game WHERE id > 5 AND coins < 1000;
 -- 意外的range查询^
 ```
+```sql
+CREATE INDEX coins_index ON game(coins);
+EXPLAIN SELECT id, name, coins, identity FROM game WHERE id > 5 AND coins < 1000;
+-- filtered字段的值很大的range查询语句^
+```
