@@ -660,3 +660,8 @@ CREATE INDEX all_indexb ON game(coins DESC, name ASC, id, identity);
 EXPLAIN SELECT id, name, coins, identity FROM game USE INDEX(all_indexb) ORDER BY coins DESC, name ASC;
 -- 创建索引时指定了字段的排序方式，查询语句很快就查好了^
 ```
+```sql
+DROP INDEX coins_index ON game;
+EXPLAIN SELECT id, name, coins, identity FROM game WHERE id > 5 AND coins < 1000;
+-- 意外的range查询^
+```
