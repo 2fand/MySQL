@@ -670,3 +670,11 @@ CREATE INDEX coins_index ON game(coins);
 EXPLAIN SELECT id, name, coins, identity FROM game WHERE id > 5 AND coins < 1000;
 -- filtered字段的值很大的range查询语句^
 ```
+```sql
+CREATE TRIGGER tst_triger
+AFTER INSERT ON test FOR EACH ROW
+BEGIN
+  SELECT MAX(t) FROM test INTO @ee;
+END;
+-- 创建insert行级插入触发器^
+```
