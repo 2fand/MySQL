@@ -678,3 +678,7 @@ BEGIN
 END;
 -- 创建insert行级插入触发器^
 ```
+```sql
+SHOW TRIGGERS;
+-- 查看当前创建的触发器^
+```
