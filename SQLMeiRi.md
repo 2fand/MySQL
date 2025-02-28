@@ -682,3 +682,9 @@ END;
 SHOW TRIGGERS;
 -- 查看当前创建的触发器^
 ```
+```sql
+SHOW TRIGGERS;
+DROP TRIGGER t;
+SHOW TRIGGERS;
+-- 删除触发器^
+```
