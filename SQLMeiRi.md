@@ -688,3 +688,11 @@ DROP TRIGGER t;
 SHOW TRIGGERS;
 -- 删除触发器^
 ```
+```sql
+CREATE TRIGGER tst
+AFTER UPDATE ON test FOR EACH ROW
+BEGIN
+    SELECT NEW.t FROM test INTO @ee;
+END;
+-- NEW关键字的用途——获取库中新数据^
+```
