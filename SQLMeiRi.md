@@ -701,3 +701,13 @@ UPDATE test SET t = 101 WHERE t = 100;
 select @ee;
 -- 触发器生效了^
 ```
+```sql
+-- abc存储过程创建语句内
+CREATE PROCEDURE abc()
+BEGIN
+    SELECT CASE WHEN TRUE THEN TRUE END;
+END;
+-- abc存储过程创建语句外
+CALL abc();
+-- 重温存储过程的创建^
+```
