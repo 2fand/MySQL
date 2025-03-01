@@ -696,3 +696,8 @@ BEGIN
 END;
 -- NEW关键字的用途——获取库中新数据^
 ```
+```sql
+UPDATE test SET t = 101 WHERE t = 100;
+select @ee;
+-- 触发器生效了^
+```
