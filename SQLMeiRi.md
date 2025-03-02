@@ -711,3 +711,18 @@ END;
 CALL abc();
 -- 重温存储过程的创建^
 ```
+```sql
+-- abca存储过程创建语句内
+CREATE PROCEDURE abca()
+BEGIN
+    DECLARE i INT DEFAULT 1;
+    sum : LOOP
+      SELECT i;
+      SET i := i + 1;
+      LEAVE sum;
+    END LOOP sum;
+END;
+-- abca存储过程创建语句外
+CALL abca();
+-- LOOP循环的使用^
+```
