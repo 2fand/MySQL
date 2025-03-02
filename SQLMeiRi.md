@@ -726,3 +726,7 @@ END;
 CALL abca();
 -- LOOP循环的使用^
 ```
+```sql
+DROP PROCEDURE abca;
+-- 删除存储过程abca^
+```
