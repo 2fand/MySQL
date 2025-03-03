@@ -747,3 +747,23 @@ END;
 CALL abca();
 -- 循环5次^
 ```
+```sql
+-- abca存储过程创建前
+DROP PROCEDURE abca;
+-- abca存储过程创建中
+CREATE PROCEDURE abca()
+BEGIN
+    DECLARE i INT DEFAULT 1;
+    SELECT i;
+    sum : LOOP
+      SET i := i + 1;
+      IF i = 20 THEN
+        LEAVE sum;
+      END IF;
+    END LOOP sum;
+    SELECT i;
+END;
+-- abca存储过程创建后
+CALL abca();
+-- 把变量i用循环加到20^
+```
