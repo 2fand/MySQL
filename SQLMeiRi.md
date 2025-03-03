@@ -730,3 +730,20 @@ CALL abca();
 DROP PROCEDURE abca;
 -- 删除存储过程abca^
 ```
+```sql
+-- abca存储过程创建中
+CREATE PROCEDURE abca()
+BEGIN
+    DECLARE i INT DEFAULT 1;
+    sum : LOOP
+      SELECT i;
+      SET i := i + 1;
+      IF i > 5 THEN
+        LEAVE sum;
+      END IF;
+    END LOOP sum;
+END;
+-- abca存储过程创建后
+CALL abca();
+-- 循环5次^
+```
