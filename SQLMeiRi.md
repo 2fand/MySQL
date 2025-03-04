@@ -784,3 +784,20 @@ END;
 CALL abca();
 -- REPEAT循环的使用^
 ```
+```sql
+-- abca存储过程创建前
+DROP PROCEDURE abca;
+-- abca存储过程创建中
+CREATE PROCEDURE abca()
+BEGIN
+    DECLARE i INT DEFAULT 1;
+    SELECT i;
+    REPEAT
+        SET i := i - 1;
+    UNTIL i < 1 END REPEAT;
+    SELECT i;
+END;
+-- abca存储过程创建后
+CALL abca();
+-- 类似于do-while循环的REPEAT循环^
+```
