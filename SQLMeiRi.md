@@ -767,3 +767,20 @@ END;
 CALL abca();
 -- 把变量i用循环加到20^
 ```
+```sql
+-- abca存储过程创建前
+-- DROP PROCEDURE abca;
+-- abca存储过程创建中
+CREATE PROCEDURE abca()
+BEGIN
+    DECLARE i INT DEFAULT 1;
+    SELECT i;
+    REPEAT
+        SET i := i + 1;
+    UNTIL i >= 20 END REPEAT;
+    SELECT i;
+END;
+-- abca存储过程创建后
+CALL abca();
+-- REPEAT循环的使用^
+```
