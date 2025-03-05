@@ -801,3 +801,11 @@ END;
 CALL abca();
 -- 类似于do-while循环的REPEAT循环^
 ```
+```sql
+-- abca存储过程创建中
+CREATE PROCEDURE abca()
+BEGIN
+    DECLARE tstCursor CURSOR FOR SELECT t FROM test;
+END;
+-- 尝试声明游标^
+```
