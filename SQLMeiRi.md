@@ -826,3 +826,27 @@ END;
 CALL abca();
 -- 游标的使用^
 ```
+```sql
+-- abca存储过程创建前
+DROP PROCEDURE abca;
+-- abca存储过程创建中
+CREATE PROCEDURE abca()
+BEGIN
+    DECLARE i INT DEFAULT 0;
+    DECLARE tstCursor CURSOR FOR SELECT t FROM test;
+    OPEN tstCursor;
+    FETCH tstCursor INTO i;
+    FETCH tstCursor INTO i;
+    FETCH tstCursor INTO i;
+    FETCH tstCursor INTO i;
+    FETCH tstCursor INTO i;
+    FETCH tstCursor INTO i;
+    FETCH tstCursor INTO i;
+    FETCH tstCursor INTO i;
+    SELECT i;
+    CLOSE tstCursor;
+END;
+-- abca存储过程创建后
+CALL abca();
+-- 多次FETCH^
+```
