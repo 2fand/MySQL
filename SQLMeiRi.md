@@ -850,3 +850,24 @@ END;
 CALL abca();
 -- 多次FETCH^
 ```
+```sql
+-- abca存储过程创建前
+DROP PROCEDURE abca;
+-- abca存储过程创建中
+CREATE PROCEDURE abca()
+BEGIN
+    DECLARE i INT DEFAULT 0;
+    DECLARE ia INT DEFAULT 8;
+    DECLARE tstCursor CURSOR FOR SELECT t FROM test;
+    OPEN tstCursor;
+    WHILE ia > 0 DO
+        FETCH tstCursor INTO i;
+        SET ia := ia - 1;
+    END WHILE;
+    SELECT i;
+    CLOSE tstCursor;
+END;
+-- abca存储过程创建后
+CALL abca();
+-- 多次FETCH(简略版)^
+```
