@@ -871,3 +871,20 @@ END;
 CALL abca();
 -- 多次FETCH(简略版)^
 ```
+```sql
+CREATE PROCEDURE abca()
+BEGIN
+    DECLARE i INT DEFAULT 0;
+    DECLARE ia INT DEFAULT 0;
+    DECLARE tstCursor CURSOR FOR SELECT t FROM test;
+    SELECT COUNT(*) FROM test INTO ia;
+    OPEN tstCursor;
+    WHILE ia > 0 DO
+        FETCH tstCursor INTO i;
+        SET ia := ia - 1;
+    END WHILE;
+    SELECT i;
+    CLOSE tstCursor;
+END;
+-- 查询test表里最后一个元素^
+```
