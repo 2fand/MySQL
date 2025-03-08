@@ -911,3 +911,7 @@ UNION ALL
 SELECT t FROM test;
 -- 自联合^
 ```
+```sql
+SELECT t FROM (SELECT t FROM test UNION ALL SELECT t FROM test) tb ORDER BY t;
+-- 自联合+数据自动聚组(ORDER BY)^
+```
