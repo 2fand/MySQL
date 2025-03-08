@@ -905,3 +905,9 @@ BEGIN
 END;
 -- 查询test表中t字段最中间的数据^
 ```
+```sql
+SELECT t FROM test
+UNION ALL
+SELECT t FROM test;
+-- 自联合^
+```
