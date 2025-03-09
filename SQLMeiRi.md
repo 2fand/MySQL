@@ -919,3 +919,17 @@ SELECT t FROM (SELECT t FROM test UNION ALL SELECT t FROM test) tb ORDER BY t;
 SELECT COUNT(*), t FROM (SELECT t FROM test UNION ALL SELECT t FROM test) tb GROUP BY t;
 -- 查询自联合之后的test表的数据的个数^
 ```
+```sql
+SELECT 
+  COUNT(*), t 
+FROM
+  (SELECT 
+    t 
+   FROM 
+    test UNION ALL SELECT t FROM test
+  ) tb 
+GROUP BY t
+ORDER BY t
+LIMIT 1;
+-- 查询自联合之后的test表的数据中的最小值个数^
+```
