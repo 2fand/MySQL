@@ -915,3 +915,7 @@ SELECT t FROM test;
 SELECT t FROM (SELECT t FROM test UNION ALL SELECT t FROM test) tb ORDER BY t;
 -- 自联合+数据自动聚组(ORDER BY)^
 ```
+```sql
+SELECT COUNT(*), t FROM (SELECT t FROM test UNION ALL SELECT t FROM test) tb GROUP BY t;
+-- 查询自联合之后的表的数据的个数^
+```
