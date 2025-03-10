@@ -947,3 +947,13 @@ ORDER BY t DESC
 LIMIT 1;
 -- 查询自联合之后的test表的数据中的最大值个数^
 ```
+```sql
+SELECT 
+  COUNT(*) count, t item 
+FROM
+  (SELECT t FROM test UNION ALL SELECT t FROM test) tb 
+WHERE
+  t IN(SELECT MIN(t) FROM test UNION ALL SELECT MAX(t) FROM test)
+GROUP BY t
+-- 查询自联合之后的test表的数据中的最小值与最大值个数^
+```
