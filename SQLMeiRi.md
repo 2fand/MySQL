@@ -933,3 +933,17 @@ ORDER BY t
 LIMIT 1;
 -- 查询自联合之后的test表的数据中的最小值个数^
 ```
+```sql
+SELECT 
+  COUNT(*), t 
+FROM
+  (SELECT 
+    t 
+   FROM 
+    test UNION ALL SELECT t FROM test
+  ) tb 
+GROUP BY t
+ORDER BY t DESC
+LIMIT 1;
+-- 查询自联合之后的test表的数据中的最大值个数^
+```
