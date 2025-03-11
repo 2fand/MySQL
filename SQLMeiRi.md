@@ -967,3 +967,12 @@ WHERE
   r = @temp;
 -- 查询test表中t字段最中间的数据·番外^
 ```
+```sql
+SELECT COUNT(DISTINCT t) / 2 FROM test INTO @temp;
+SELECT t
+FROM
+  (SELECT ROW_NUMBER() OVER (ORDER BY t) r, t FROM (SELECT DISTINCT t FROM test) tb) tb
+WHERE
+  r = @temp;
+-- 查询test表中t字段的中间值^
+```
