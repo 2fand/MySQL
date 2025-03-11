@@ -957,3 +957,13 @@ WHERE
 GROUP BY t
 -- 查询自联合之后的test表的数据中的最小值与最大值个数^
 ```
+```sql
+SELECT COUNT(*) / 2 FROM test INTO @temp;
+SELECT
+  t
+FROM
+  (SELECT ROW_NUMBER() OVER (ORDER BY t) r, t FROM test) tb
+WHERE
+  r = @temp;
+-- 查询test表中t字段最中间的数据·番外^
+```
