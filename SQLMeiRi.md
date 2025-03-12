@@ -985,3 +985,11 @@ WITH tb AS (
 SELECT t FROM tb;
 -- WITH临时表的创建^
 ```
+```sql
+WITH tb AS (
+  SELECT ROW_NUMBER() OVER (PARTITION BY t ORDER BY t) r, t FROM test
+)
+
+SELECT t FROM tb WHERE r = (SELECT MAX(r) FROM tb);
+-- 查询test表中出现次数最多的数据^
+```
