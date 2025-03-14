@@ -1009,3 +1009,11 @@ WITH tb AS (
 SELECT t FROM (SELECT MAX(r) mr, t FROM tb GROUP BY t) tba WHERE mr = (SELECT MIN(mr) FROM (SELECT MAX(r) mr, t FROM tb GROUP BY t) tba);
 -- 查询test表中出现次数最少的数据^
 ```
+```sql
+WITH tb AS (
+  SELECT ROW_NUMBER() OVER (PARTITION BY t ORDER BY t) r, t FROM test
+)
+
+SELECT mr, t FROM (SELECT MAX(r) mr, t FROM tb GROUP BY t) tba ORDER BY mr DESC;
+-- 把test表中每个元素的出现次数从大到小进行排序^
+```
