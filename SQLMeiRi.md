@@ -1017,3 +1017,8 @@ WITH tb AS (
 SELECT mr, t FROM (SELECT MAX(r) mr, t FROM tb GROUP BY t) tba ORDER BY mr DESC;
 -- 把test表中每个元素的出现次数从大到小进行排序^
 ```
+```sql
+INSERT INTO gameidentity VALUES(2, 'unk');
+SELECT gameidentity.identity FROM game RIGHT JOIN gameidentity ON game.identity = gameidentity.id WHERE game.name IS NULL;
+-- 右外查询^
+```
