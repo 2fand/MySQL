@@ -1022,3 +1022,7 @@ INSERT INTO gameidentity VALUES(2, 'unk');
 SELECT gameidentity.identity FROM game RIGHT JOIN gameidentity ON game.identity = gameidentity.id WHERE game.name IS NULL;
 -- 右外查询^
 ```
+```sql
+EXPLAIN SELECT gameidentity.identity FROM game RIGHT JOIN gameidentity ON game.identity = gameidentity.id WHERE game.name IS NULL;
+-- 查询右外查询的性能^
+```
