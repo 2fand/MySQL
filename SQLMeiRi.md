@@ -1026,3 +1026,8 @@ SELECT gameidentity.identity FROM game RIGHT JOIN gameidentity ON game.identity 
 EXPLAIN SELECT gameidentity.identity FROM game RIGHT JOIN gameidentity ON game.identity = gameidentity.id WHERE game.name IS NULL;
 -- 查询右外查询的性能^
 ```
+```sql
+INSERT INTO test VALUES(-1), (-2), (-3), (-4), (-5);
+SELECT ABS(t) FROM test;
+-- ABS求绝对值函数的应用^
+```
