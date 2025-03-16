@@ -1036,3 +1036,7 @@ INSERT INTO test VALUES(-1), (-2), (-3), (-4), (-5);
 SELECT -ABS(t) FROM test;
 -- 把表中数据全都转为负数^
 ```
+```sql
+SELECT -t FROM test;
+-- 查询数据的相反数^
+```
