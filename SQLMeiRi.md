@@ -1031,3 +1031,8 @@ INSERT INTO test VALUES(-1), (-2), (-3), (-4), (-5);
 SELECT ABS(t) FROM test;
 -- ABS求绝对值函数的应用^
 ```
+```sql
+INSERT INTO test VALUES(-1), (-2), (-3), (-4), (-5);
+SELECT -ABS(t) FROM test;
+-- 把表中数据全都转为负数^
+```
