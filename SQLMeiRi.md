@@ -1044,3 +1044,7 @@ SELECT -t FROM test;
 SELECT --t FROM test;
 -- 没变化^
 ```
+```sql
+SELECT +t FROM test;
+-- 也没变^
+```
