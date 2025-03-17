@@ -1040,3 +1040,7 @@ SELECT -ABS(t) FROM test;
 SELECT -t FROM test;
 -- 查询数据的相反数^
 ```
+```sql
+SELECT --t FROM test;
+-- 没变化^
+```
