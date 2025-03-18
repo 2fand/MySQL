@@ -1048,3 +1048,13 @@ SELECT --t FROM test;
 SELECT +t FROM test;
 -- 也没变^
 ```
+```sql
+-- CREATE TABLE testb(
+--   a INT,
+--   b INT
+-- );
+-- INSERT INTO testb VALUES(1, 2), (2, 4), (4, 8), (8, 16), (16, 20);
+
+SELECT IF(1 = (SELECT COUNT(*) FROM (SELECT COUNT(*) FROM testb GROUP BY a / b) tb), 'TRUE', 'FALSE') isDirectproportion;
+-- 检测testb表中a和b两个数据是否成正比例关系^
+```
