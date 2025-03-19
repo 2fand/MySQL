@@ -1067,3 +1067,9 @@ SELECT IF(1 = (SELECT COUNT(*) FROM (SELECT COUNT(*) FROM testb GROUP BY a / b) 
 SELECT IF(1 = (SELECT COUNT(*) FROM (SELECT COUNT(*) FROM testb GROUP BY a * b) tb), 'TRUE', 'FALSE') inverseProportion;
 -- 检测testb表中a和b两个数据是否成反比例关系^
 ```
+```sql
+DELETE FROM testb;
+INSERT INTO testb VALUES(1, 16), (2, 8), (4, 4), (8, 2), (16, 1);
+SELECT IF(1 = (SELECT COUNT(*) FROM (SELECT COUNT(*) FROM testb GROUP BY a * b) tb), 'TRUE', 'FALSE') inverseProportion;
+-- 检测testb表中a和b两个数据是否成反比例关系2^
+```
