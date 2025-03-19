@@ -1063,3 +1063,7 @@ UPDATE testb SET b = 32 WHERE a = 16;
 SELECT IF(1 = (SELECT COUNT(*) FROM (SELECT COUNT(*) FROM testb GROUP BY a / b) tb), 'TRUE', 'FALSE') isDirectproportion;
 -- 检测testb表中a和b两个数据是否成正比例关系2^
 ```
+```sql
+SELECT IF(1 = (SELECT COUNT(*) FROM (SELECT COUNT(*) FROM testb GROUP BY a * b) tb), 'TRUE', 'FALSE') inverseProportion;
+-- 检测testb表中a和b两个数据是否成反比例关系^
+```
