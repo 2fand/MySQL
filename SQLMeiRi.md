@@ -1077,3 +1077,9 @@ SELECT IF(1 = (SELECT COUNT(*) FROM (SELECT COUNT(*) FROM testb GROUP BY a * b) 
 DELETE FROM testb WHERE (SELECT 1);
 -- DELETE子句中嵌套SELECT查询语句^
 ```
+```sql
+-- INSERT INTO testa VALUES(3), (4), (5);
+SELECT t FROM testa LIMIT 1 INTO @first;
+DELETE FROM testa WHERE t = @first;
+-- 删除testa表中的第一行^
+```
