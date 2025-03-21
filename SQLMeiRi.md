@@ -1083,3 +1083,7 @@ SELECT t FROM testa LIMIT 1 INTO @first;
 DELETE FROM testa WHERE t = @first;
 -- 删除testa表中的第一行^
 ```
+```sql
+SELECT t FROM (SELECT ROW_NUMBER() OVER () r, t FROM test) tb ORDER BY r DESC; 
+-- 反向查询test表的数据^
+```
