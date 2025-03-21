@@ -1087,3 +1087,7 @@ DELETE FROM testa WHERE t = @first;
 SELECT t FROM (SELECT ROW_NUMBER() OVER () r, t FROM test) tb ORDER BY r DESC; 
 -- 反向查询test表的数据^
 ```
+```sql
+DELETE FROM test WHERE t = (SELECT t FROM (SELECT ROW_NUMBER() OVER () r, t FROM test) tb ORDER BY r DESC LIMIT 1);
+-- 删除test表中的倒数第一行^
+```
