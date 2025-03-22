@@ -1091,3 +1091,7 @@ SELECT t FROM (SELECT ROW_NUMBER() OVER () r, t FROM test) tb ORDER BY r DESC;
 DELETE FROM test WHERE t = (SELECT t FROM (SELECT ROW_NUMBER() OVER () r, t FROM test) tb ORDER BY r DESC LIMIT 1);
 -- 删除test表中的倒数第一行^
 ```
+```sql
+DELETE FROM test WHERE t = (SELECT t FROM (SELECT ROW_NUMBER() OVER () r, t FROM test) tb ORDER BY r DESC LIMIT 1, 1); 
+-- 删除test表中的倒数第二行^
+```
