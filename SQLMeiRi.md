@@ -1095,3 +1095,8 @@ DELETE FROM test WHERE t = (SELECT t FROM (SELECT ROW_NUMBER() OVER () r, t FROM
 DELETE FROM test WHERE t = (SELECT t FROM (SELECT ROW_NUMBER() OVER () r, t FROM test) tb ORDER BY r DESC LIMIT 1, 1); 
 -- 删除test表中的倒数第二行^
 ```
+```sql
+SELECT t FROM test LIMIT 1 INTO @first;
+DELETE FROM test WHERE t IN(@first, (SELECT t FROM (SELECT ROW_NUMBER() OVER () r, t FROM test) tb ORDER BY r DESC LIMIT 1)); 
+-- “掐头去尾”^
+```
