@@ -1109,3 +1109,12 @@ INSERT INTO testUnion VALUES(1), (2), (3);
 SELECT a.num, b.num FROM testunion a INNER JOIN testunion b;
 -- 获取由1~3组成的两个数的所有序列^
 ```
+```sql
+DROP TABLE IF EXISTS testUnion;
+CREATE TABLE testUnion(
+    num INT UNIQUE
+);
+INSERT INTO testUnion VALUES(1), (2), (3), (4), (5);
+SELECT a.num, b.num FROM testunion a INNER JOIN testunion b;
+-- 获取由1~5组成的两个数的所有序列^
+```
