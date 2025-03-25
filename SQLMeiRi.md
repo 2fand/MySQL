@@ -1136,3 +1136,8 @@ INSERT INTO testUnion VALUES(1), (2), (3);
 SELECT a.num, b.num, c.num FROM testunion a INNER JOIN testunion b INNER JOIN testunion c ON a.num != b.num AND b.num != c.num AND c.num != a.num ORDER BY a.num, b.num, c.num;
 -- 获取由1~3组成的三个数的所有唯一序列^
 ```
+```sql
+DELETE FROM gameidentity WHERE id = 2;
+CREATE VIEW a AS SELECT game.name, game.coins, gameidentity.identity FROM game INNER JOIN gameidentity ON game.identity = gameidentity.id;
+-- 创建多表联查的视图^
+```
