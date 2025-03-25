@@ -1141,3 +1141,7 @@ DELETE FROM gameidentity WHERE id = 2;
 CREATE VIEW a AS SELECT game.name, game.coins, gameidentity.identity FROM game INNER JOIN gameidentity ON game.identity = gameidentity.id;
 -- 创建多表联查的视图^
 ```
+```sql
+UPDATE a SET coins = 0 WHERE name = 'S';
+-- 对视图进行修改操作^
+```
