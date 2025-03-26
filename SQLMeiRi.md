@@ -1150,3 +1150,8 @@ INSERT INTO a(name, coins) VALUES('a', 1);
 UPDATE game SET identity = 0 WHERE identity IS NULL; -- 修正
 -- 对视图进行插入操作^
 ```
+```sql
+CREATE VIEW b AS SELECT name, coins FROM game;
+DELETE FROM b WHERE name = 'S';
+-- 对视图进行删除操作^
+```
