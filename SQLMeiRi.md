@@ -1145,3 +1145,8 @@ CREATE VIEW a AS SELECT game.name, game.coins, gameidentity.identity FROM game I
 UPDATE a SET coins = 0 WHERE name = 'S';
 -- 对视图进行修改操作^
 ```
+```sql
+INSERT INTO a(name, coins) VALUES('a', 1);
+UPDATE game SET identity = 0 WHERE identity IS NULL; -- 修正
+-- 对视图进行插入操作^
+```
