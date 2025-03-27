@@ -1160,3 +1160,7 @@ CREATE VIEW c AS SELECT name, coins, identity FROM game;
 SELECT c.name, c.coins, gameidentity.identity identity FROM c INNER JOIN gameidentity ON c.identity = gameidentity.id;
 -- 对普通视图进行多表联查操作^
 ```
+```sql
+SHOW CREATE VIEW c;
+-- 查询建视图的语句^
+```
