@@ -1155,3 +1155,8 @@ CREATE VIEW b AS SELECT name, coins FROM game;
 DELETE FROM b WHERE name = 'S';
 -- 对视图进行删除操作^
 ```
+```sql
+CREATE VIEW c AS SELECT name, coins, identity FROM game;
+SELECT c.name, c.coins, gameidentity.identity identity FROM c INNER JOIN gameidentity ON c.identity = gameidentity.id;
+-- 对普通视图进行多表联查操作^
+```
