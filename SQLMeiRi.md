@@ -1164,3 +1164,11 @@ SELECT c.name, c.coins, gameidentity.identity identity FROM c INNER JOIN gameide
 SHOW CREATE VIEW c;
 -- 查询建视图的语句^
 ```
+```sql
+DROP VIEW IF EXISTS c;
+DROP VIEW IF EXISTS d;
+CREATE VIEW c AS SELECT name, coins, identity FROM game;
+CREATE VIEW d AS SELECT id, identity FROM gameidentity;
+SELECT c.name, c.coins, d.identity identity FROM c INNER JOIN d ON c.identity = d.id;
+-- “多视图联查”^
+```
