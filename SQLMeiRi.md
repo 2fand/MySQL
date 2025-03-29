@@ -1179,3 +1179,7 @@ CREATE VIEW d AS SELECT id, identity FROM gameidentity;
 SELECT c.name, c.coins, d.identity identity FROM c INNER JOIN d ON c.identity = d.id;
 -- 上面“多视图联查”的sql语句“简写”^
 ```
+```sql
+SELECT '%', "8", '1' UNION SELECT 'a', 'b', 'c';
+-- 常量查询+UNION^
+```
