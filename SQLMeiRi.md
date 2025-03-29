@@ -1183,3 +1183,7 @@ SELECT c.name, c.coins, d.identity identity FROM c INNER JOIN d ON c.identity = 
 SELECT '%', "8", '1' UNION SELECT 'a', 'b', 'c';
 -- 常量查询+UNION^
 ```
+```sql
+SELECT '%', "8", '1' UNION SELECT 'a', 'b', 'c' UNION SELECT '3.14', '15926', '53589';
+-- 多层UNION^
+```
