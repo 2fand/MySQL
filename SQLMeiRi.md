@@ -1187,3 +1187,7 @@ SELECT '%', "8", '1' UNION SELECT 'a', 'b', 'c';
 SELECT '%', "8", '1' UNION SELECT 'a', 'b', 'c' UNION SELECT '3.14', '15926', '53589';
 -- 多层UNION^
 ```
+```sql
+SELECT '%', 111, '1' UNION ALL SELECT '%', 'b', 'c';
+-- “混入数字”^
+```
