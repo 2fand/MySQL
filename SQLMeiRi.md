@@ -1191,3 +1191,7 @@ SELECT '%', "8", '1' UNION SELECT 'a', 'b', 'c' UNION SELECT '3.14', '15926', '5
 SELECT '%', 111, '1' UNION ALL SELECT '%', 'b', 'c';
 -- “混入数字”^
 ```
+```sql
+SELECT CONCAT(1122, '111');
+-- 理论上不正确的函数使用^
+```
