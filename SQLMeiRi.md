@@ -1195,3 +1195,7 @@ SELECT '%', 111, '1' UNION ALL SELECT '%', 'b', 'c';
 SELECT CONCAT(1122, '111');
 -- 理论上不正确的函数使用^
 ```
+```sql
+SELECT CONCAT(t, 'aaa') FROM test;
+-- 理论上不正确的函数使用2^
+```
