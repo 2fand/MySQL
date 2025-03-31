@@ -1199,3 +1199,7 @@ SELECT CONCAT(1122, '111');
 SELECT CONCAT(t, 'aaa') FROM test;
 -- 理论上不正确的函数使用2^
 ```
+```sql
+SELECT LPAD(t, 10, t) FROM test;
+-- 理论上不正确的函数使用3^
+```
