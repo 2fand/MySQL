@@ -1203,3 +1203,7 @@ SELECT CONCAT(t, 'aaa') FROM test;
 SELECT LPAD(t, 10, t) FROM test;
 -- 理论上不正确的函数使用3^
 ```
+```sql
+SELECT TIMESTAMP('1111-11-11', '11:11:11');
+-- 将日期与时间合二为一^
+```
