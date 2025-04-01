@@ -1207,3 +1207,7 @@ SELECT LPAD(t, 10, t) FROM test;
 SELECT TIMESTAMP('1111-11-11', '11:11:11');
 -- 将日期与时间合二为一^
 ```
+```sql
+SELECT TIMESTAMP('2000-01-01', '10:00:00');
+-- 将日期与时间合二为一2^
+```
