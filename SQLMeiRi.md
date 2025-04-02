@@ -1211,3 +1211,7 @@ SELECT TIMESTAMP('1111-11-11', '11:11:11');
 SELECT TIMESTAMP('2000-01-01', '10:00:00');
 -- 将日期与时间合二为一2^
 ```
+```sql
+SELECT CURRENT_TIMESTAMP();
+-- 获取当前时间^
+```
