@@ -1215,3 +1215,7 @@ SELECT TIMESTAMP('2000-01-01', '10:00:00');
 SELECT CURRENT_TIMESTAMP();
 -- 获取当前时间^
 ```
+```sql
+SELECT UNIX_TIMESTAMP();
+-- 获取当前时间戳^
+```
