@@ -1219,3 +1219,7 @@ SELECT CURRENT_TIMESTAMP();
 SELECT UNIX_TIMESTAMP();
 -- 获取当前时间戳^
 ```
+```sql
+SELECT SIN(0);
+-- 数学函数^
+```
