@@ -1223,3 +1223,7 @@ SELECT UNIX_TIMESTAMP();
 SELECT SIN(0);
 -- 数学函数^
 ```
+```sql
+SELECT COS(0);
+-- 数学函数2^
+```
