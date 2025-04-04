@@ -1227,3 +1227,7 @@ SELECT SIN(0);
 SELECT COS(0);
 -- 数学函数2^
 ```
+```sql
+CREATE TABLE aaa AS SELECT 1;
+-- 通过查询语句建表^
+```
