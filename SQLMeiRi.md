@@ -1231,3 +1231,19 @@ SELECT COS(0);
 CREATE TABLE aaa AS SELECT 1;
 -- 通过查询语句建表^
 ```
+```sql
+DROP TABLE IF EXISTS participants, aaa;
+
+CREATE TABLE participants (
+  id INT NOT NULL PRIMARY KEY AUTO_INCREMENT, 
+  name VARCHAR(20), 
+  gender CHAR(1), 
+  time DATETIME, 
+  m FLOAT DEFAULT NULL
+);
+
+INSERT INTO participants VALUES (1, '凤皇', '男', '2020-06-17 10:04:24', 1.49), (2, '柏佳兴', '男', '2020-06-17 10:03:35', 1.07), (3, '田静', '女', '2020-06-17 10:01:29', 1.34), (4, '何平', '男', '2020-06-17 10:01:05', 1.14), (5, '李尤爱', '女', '2020-06-17 10:05:07', 1.56), (6, '束组', '男', '2020-06-17 10:02:02', 1.66), (7, '曹彼壁', '男', '2020-06-17 10:03:09', 1.62), (8, '朱翠碧', '女', '2020-06-17 10:04:03', 1.15), (9, '赵涵然', '女', '2020-06-17 10:00:22', 1.61), (10, '傅幸', '男', '2020-06-17 10:02:34', 1.41);
+
+CREATE TABLE aaa AS SELECT id, name, gender, time, m FROM participants;
+-- 表复制^
+```
