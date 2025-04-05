@@ -1247,3 +1247,8 @@ INSERT INTO participants VALUES (1, '凤皇', '男', '2020-06-17 10:04:24', 1.49
 CREATE TABLE aaa AS SELECT id, name, gender, time, m FROM participants;
 -- 表复制^
 ```
+```sql
+DROP TABLE IF EXISTS aaa;
+CREATE TABLE aaa AS SELECT game.id, game.coins, game.name, gi.identity FROM game JOIN gameidentity gi ON game.identity = gi.id;
+-- 二表合一^
+```
