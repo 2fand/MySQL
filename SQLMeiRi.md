@@ -1252,3 +1252,11 @@ DROP TABLE IF EXISTS aaa;
 CREATE TABLE aaa AS SELECT game.id, game.coins, game.name, gi.identity FROM game JOIN gameidentity gi ON game.identity = gi.id;
 -- 二表合一^
 ```
+```sql
+USE db;
+DROP DATABASE IF EXISTS a;
+DROP TABLE IF EXISTS aaa;
+CREATE DATABASE a;
+CREATE TABLE a.aaa AS SELECT game.id, game.coins, game.name, gi.identity FROM game JOIN gameidentity gi ON game.identity = gi.id;
+-- 在db数据库里创建在a数据库中的aaa表^
+```
