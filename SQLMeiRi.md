@@ -1264,3 +1264,7 @@ CREATE TABLE a.aaa AS SELECT game.id, game.coins, game.name, gi.identity FROM ga
 CREATE TABLE emp AS SELECT t FROM test WHERE 2 = 1;
 -- 用SELECT创建空表1^
 ```
+```sql
+CREATE TABLE empa AS SELECT * FROM participants WHERE FALSE;
+-- 试着用“*”和SELECT创建空表^
+```
