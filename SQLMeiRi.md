@@ -1260,3 +1260,7 @@ CREATE DATABASE a;
 CREATE TABLE a.aaa AS SELECT game.id, game.coins, game.name, gi.identity FROM game JOIN gameidentity gi ON game.identity = gi.id;
 -- 在db数据库里创建在a数据库中的aaa表^
 ```
+```sql
+CREATE TABLE emp AS SELECT t FROM test WHERE 2 = 1;
+-- 用SELECT创建空表1^
+```
