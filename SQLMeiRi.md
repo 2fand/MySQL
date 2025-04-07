@@ -1268,3 +1268,8 @@ CREATE TABLE emp AS SELECT t FROM test WHERE 2 = 1;
 CREATE TABLE empa AS SELECT * FROM participants WHERE FALSE;
 -- 试着用“*”和SELECT创建空表^
 ```
+```sql
+INSERT INTO participants(name, time) VALUES("", "2000-01-01");
+SELECT id, name, gender, time, m FROM participants WHERE !LENGTH(name);
+-- 空字符串匹配1^
+```
