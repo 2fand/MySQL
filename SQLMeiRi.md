@@ -1273,3 +1273,8 @@ INSERT INTO participants(name, time) VALUES("", "2000-01-01");
 SELECT id, name, gender, time, m FROM participants WHERE !LENGTH(name);
 -- 空字符串匹配1^
 ```
+```sql
+INSERT INTO participants(name, time) VALUES("", "2000-01-01");
+SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '^$';
+-- 空字符串匹配2^
+```
