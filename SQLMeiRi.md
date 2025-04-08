@@ -1282,3 +1282,8 @@ SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '^$';
 SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '^..$';
 -- 用正则查询名字只有两个字的人^
 ```
+```sql
+SELECT id, name, gender, time, m FROM participants WHERE 1 = MINUTE(time);
+SELECT id, name, gender, time, m FROM participants WHERE time RLIKE '^.{14}01.*$';
+-- 用两种方式查询类型为DATETIME的time列中分数为1的人^
+```
