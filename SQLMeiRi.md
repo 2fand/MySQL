@@ -1278,3 +1278,7 @@ INSERT INTO participants(name, time) VALUES("", "2000-01-01");
 SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '^$';
 -- 空字符串匹配2^
 ```
+```sql
+SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '^..$';
+-- 用正则查询名字只有两个字的人^
+```
