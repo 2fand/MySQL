@@ -1287,3 +1287,8 @@ SELECT id, name, gender, time, m FROM participants WHERE 1 = MINUTE(time);
 SELECT id, name, gender, time, m FROM participants WHERE time RLIKE '^.{14}01.*$';
 -- 用两种方式查询类型为DATETIME的time列中分数为1的人^
 ```
+```sql
+SELECT id, name, gender, time, m FROM participants WHERE m <= 1.5 AND m >= 1.4;
+SELECT id, name, gender, time, m FROM participants WHERE m RLIKE '1\.5|1\.4.';
+-- 用两种方式查询类型为浮点数类型的m列中值再1.4到1.5之间的人^
+```
