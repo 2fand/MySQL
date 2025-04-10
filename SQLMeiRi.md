@@ -1300,3 +1300,7 @@ SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '[幸束凤]
 SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '^^';
 -- 无意义正则1^
 ```
+```sql
+SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '$$';
+-- 无意义正则2^
+```
