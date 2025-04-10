@@ -1296,3 +1296,7 @@ SELECT id, name, gender, time, m FROM participants WHERE m RLIKE '1\.5|1\.4.';
 SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '[幸束凤]';
 -- 用正则查询名字中带有“幸”“束”或“凤”字的人^
 ```
+```sql
+SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '^^';
+-- 无意义正则1^
+```
