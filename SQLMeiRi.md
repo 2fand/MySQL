@@ -1304,3 +1304,7 @@ SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '^^';
 SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '$$';
 -- 无意义正则2^
 ```
+```sql
+SELECT id, name, gender, time, m FROM participants WHERE id RLIKE '[6-9]|10';
+-- 查询id为6-10的人的信息^
+```
