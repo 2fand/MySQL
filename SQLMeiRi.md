@@ -1308,3 +1308,9 @@ SELECT id, name, gender, time, m FROM participants WHERE name RLIKE '$$';
 SELECT id, name, gender, time, m FROM participants WHERE id RLIKE '[6-9]|10';
 -- 查询id为6-10的人的信息^
 ```
+```sql
+SELECT id, name, gender, time, m FROM participants WHERE id RLIKE '1?[0-3]';
+
+SELECT id, name, gender, time, m FROM participants WHERE id RLIKE '10|1?[1-3]';
+-- 查询id为1-3或10-13的人的信息^
+```
