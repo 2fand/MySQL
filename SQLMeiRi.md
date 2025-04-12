@@ -1323,3 +1323,12 @@ CREATE TABLE t (
 INSERT INTO t(d) VALUES(1.9530);
 -- DECIMAL自定义精度小数类型^
 ```
+```sql
+DROP TABLE IF EXISTS t; 
+CREATE TABLE t (
+  d DECIMAL(5, 0)
+);
+
+INSERT INTO t(d) VALUES(1.50000), (2.49999);
+-- 此类型善于四舍五入^
+```
