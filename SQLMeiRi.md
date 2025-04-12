@@ -1314,3 +1314,12 @@ SELECT id, name, gender, time, m FROM participants WHERE id RLIKE '1?[0-3]';
 SELECT id, name, gender, time, m FROM participants WHERE id RLIKE '10|1?[1-3]';
 -- 查询id为1-3或10-13的人的信息^
 ```
+```sql
+DROP TABLE IF EXISTS t; 
+CREATE TABLE t (
+  d DECIMAL(3, 1)
+);
+
+INSERT INTO t(d) VALUES(1.9530);
+-- DECIMAL自定义精度小数类型^
+```
