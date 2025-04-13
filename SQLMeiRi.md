@@ -1332,3 +1332,12 @@ CREATE TABLE t (
 INSERT INTO t(d) VALUES(1.50000), (2.49999);
 -- 此类型善于四舍五入^
 ```
+```sql
+DROP TABLE IF EXISTS t; 
+CREATE TABLE t (
+  d BINARY
+);
+
+INSERT INTO t(d) VALUES(true), (false);
+-- 二进制^
+```
