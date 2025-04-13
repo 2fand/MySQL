@@ -1341,3 +1341,7 @@ CREATE TABLE t (
 INSERT INTO t(d) VALUES(true), (false);
 -- 二进制^
 ```
+```sql
+SELECT IF(COUNT(*) = SUM(d), 'TRUE', 'FALSE') FROM t;
+-- 判断一个二进制类型的列中的布尔值是否都为真^
+```
