@@ -1345,3 +1345,7 @@ INSERT INTO t(d) VALUES(true), (false);
 SELECT IF(COUNT(*) = SUM(d), 'TRUE', 'FALSE') FROM t;
 -- 判断一个二进制类型的列中的布尔值是否都为真^
 ```
+```sql
+SELECT IF(0 = SUM(d), 'TRUE', 'FALSE') FROM t;
+-- 判断一个二进制类型的列中的布尔值是否都为假^
+```
