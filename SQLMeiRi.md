@@ -1349,3 +1349,7 @@ SELECT IF(COUNT(*) = SUM(d), 'TRUE', 'FALSE') FROM t;
 SELECT IF(0 = SUM(d), 'TRUE', 'FALSE') FROM t;
 -- 判断一个二进制类型的列中的布尔值是否都为假^
 ```
+```sql
+SELECT SUM(d) trueNum FROM t;
+-- 计算表中的真值数^
+```
