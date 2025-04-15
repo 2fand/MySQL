@@ -1353,3 +1353,7 @@ SELECT IF(0 = SUM(d), 'TRUE', 'FALSE') FROM t;
 SELECT SUM(d) trueNum FROM t;
 -- 计算表中的真值数^
 ```
+```sql
+SELECT COUNT(*) - SUM(d) falseNum FROM t;
+-- 计算表中的假值数^
+```
