@@ -1361,3 +1361,7 @@ SELECT COUNT(*) - SUM(d) falseNum FROM t;
 SELECT IF(13 = COUNT(*) AND 12 = MAX(id), 'TRUE', 'FALSE') FROM participants;
 -- 计算IF函数中的条件为真或为假^
 ```
+```sql
+SELECT 'aa' LIKE 'aa';
+-- 无意义LIKE^
+```
