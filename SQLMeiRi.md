@@ -1365,3 +1365,7 @@ SELECT IF(13 = COUNT(*) AND 12 = MAX(id), 'TRUE', 'FALSE') FROM participants;
 SELECT 'aa' LIKE 'aa';
 -- 无意义LIKE^
 ```
+```sql
+SELECT NULL;
+-- 查询空^
+```
