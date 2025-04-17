@@ -1369,3 +1369,7 @@ SELECT 'aa' LIKE 'aa';
 SELECT NULL;
 -- 查询空^
 ```
+```sql
+SELECT name FROM Customer WHERE referee_id IS NULL OR referee_id != 2;
+-- “584. 寻找用户推荐人”^
+```
